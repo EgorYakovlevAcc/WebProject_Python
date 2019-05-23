@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content_title %}
+    sign in
+{% endblock %}
+
+{% block content %}
+    <form method="post">
+        <p>username</p>
+        <input type="text"/>
+        <br>
+        <p>email</p>
+        <input type="email"/>
+        <br>
+        <p>password</p>
+        <input type="password"/>
+        <br>
+        <button type="submit">sign in</button>
+    </form>
+{% endblock %}

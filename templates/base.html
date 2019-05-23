@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    {% block headers %}
+    {% endblock %}
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
           integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -22,16 +24,19 @@
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li class="nav-item active">
-                        <a class="nav-link disabled" href="#">home<span class="sr-only">(current)</span></a>
+                        <a class="nav-link disabled" href="/">home<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">sign in</a>
+                        <a class="nav-link" href="{{ url_for('sign_in') }}">sign in</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">sign up</a>
+                        <a class="nav-link" href="{{ url_for('sign_up') }}">sign up</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">about</a>
+                        <a class="nav-link" href="{{ url_for('posts.index') }}">posts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('about') }}">about</a>
                     </li>
                 </ul>
             </div>

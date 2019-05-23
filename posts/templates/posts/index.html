@@ -5,5 +5,11 @@
 {% endblock %}
 
 {% block content %}
-    posts content
+    <a href = "{{ url_for('posts.create_post') }}"><button type="submit" style="padding: 5px; margin: 10px">create post</button></a>
+    {% for post in posts %}
+    <p>
+{#        {{ url_for('posts.post_detail', slug = post.slug) }}#}
+        <a href ="#">{{post.title }}</a>
+    </p>
+    {% endfor %}
 {% endblock %}
